@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Mern from "./mern";
 import Figma from "./figma";
 
@@ -36,6 +36,11 @@ const figmaData = [
     discription: "This is a food website prototype",
     tech: "UI/UX",
   },
+  {
+    projectName: "Multi vendor e-commerce",
+    discription: "This is a multivendor E-commerce website prototype",
+    tech: "UI/UX"
+  }
 ];
 
 const Data = () => {
@@ -45,6 +50,7 @@ const Data = () => {
     setActiveChoice(choice);
   };
 
+  useEffect(()=>{},[activeChoice])
   return (
     <div>
       <button onClick={() => handleChoice("mern")}>MERN Data</button>
